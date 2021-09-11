@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="./style.css" />
+  <link rel="stylesheet" href="./teamsyouown.css">
+  <title>Dashboard</title>
+</head>
+
+<!----------- Body --------------->
+
+<body>
+  <!---------------- home ------------------>
+  <div id="home" class="show">
+    <div class="form">
+      <div class="title">Welcome</div>
+      <div>
+        <span id="user" class="subtitle"></span>
+      </div>
+      <button class="submit" id="teamsyouown" onclick="teamsYouOwn()">
+        Teams You Own
+      </button>
+      <button class="submit" id="teamsyoupart" onclick="teamsyoupart()">
+        Teams You're Part of
+      </button>
+      <button class="submit" onclick="logout()">Logout</button>
+    </div>
+  </div>
+
+
+
+  <!------------------ teams you Own ------------------->
+  <div class="hide" id="yourteam">
+    <div class="main_div_head">
+      <div class="main_div" id="blur">
+        <div class="title">Teams You Own</div>
+        <div class="teamborder">
+          <span id="teamdiv"></span>
+          <div class="teamNameborder">
+            <span id="teamname" class="teamNameStyle">anas</span>
+          </div>
+          <div class="teammember">
+            <span class="teammemberchild">Members:</span>
+            <span id="teammember" class="teammemberchild">basit</span>
+          </div>
+          <div class="teamFunct">
+            <i class="fa fa-pencil-square" aria-hidden="true" title="Setting"></i>
+            <i class="fa fa-refresh" aria-hidden="true" title="Report"></i>
+            <i class="fa fa-trash-o" aria-hidden="true" title="Delete"></i>
+          </div>
+        </div>
+
+        <div class="button_style">
+          <button class="createTeam" id="home" onclick="home()">Home</button>
+          <button class="createTeam" id="createTeam" onclick="createTeam()">
+            Create Team
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="hidden" id="showPopup">
+      <div class="title">Create New Team</div>
+      <div class="relative">
+        <div class="input-container ic1">
+          <input id="teamname" class="input" type="text" placeholder=" " />
+          <div class="cut"></div>
+          <label for="TeamName" class="placeholder">Team Name</label>
+        </div>
+        <div class="input-container ic1">
+          <select name="Category" id="teamoption" class="input">
+            <option value="" disabled selected>Category</option>
+            <option value="">1</option>
+            <option value="">2</option>
+            <option value="">3</option>
+            <option value="">4</option>
+            <option value="">5</option>
+            <option value="">6</option>
+          </select>
+        </div>
+
+        <div class="input-container ic1">
+          <input id="member" class="input" type="text" placeholder=" " />
+          <div class="cut2"></div>
+          <label for="Members" class="placeholder">Members (Type Email)</label>
+        </div>
+        <button class="submit2" onclick="newTeam()">Create Team</button>
+        <button class="submit3" onclick="popUpHide()">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+
+  <!------------------- teams your part -->
+  <div id="yourteam" class="hide">
+    <div class="main_div_head">
+      <div class="main_div" id="blur">
+        <div class="title">Teams You're Part of</div>
+        <div class="teams_head"></div>
+        <div class="button_style">
+          <button class="createTeam" id="home" onclick="home()">Home</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!------------------ javascript tags  ------------------>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+  <script src="./services.js"></script>
+  <script src="./signup.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>SignUp</title>
+  </head>
+
+  <!----------- Body --------------->
+  <body>
+    <div class="form">
+      <div class="title">Welcome</div>
+      <div class="subtitle">Let's create your account!</div>
+      <div class="input-container ic1">
+        <input
+          id="signupusername"
+          class="input username"
+          type="text"
+          placeholder=" "
+        />
+        <div class="cut"></div>
+        <label for="username" class="placeholder">User Name</label>
+      </div>
+
+      <div class="input-container ic2">
+        <input
+          id="signupemail"
+          class="input email"
+          type="text"
+          placeholder=" "
+        />
+        <div class="cut"></div>
+        <label for="email" class="placeholder">Email</label>
+      </div>
+
+      <div class="input-container ic2">
+        <input
+          id="signuppassword"
+          class="input password"
+          type="password"
+          placeholder=" "
+        />
+        <div class="cut"></div>
+        <label for="password" class="placeholder">Password</label>
+      </div>
+
+      <button class="submit" id="signUp" onclick="signUp()">Submit</button>
+      <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+      <script src="./signup.js"></script>
+      <script src="./services.js"></script>
+    </div>
+  </body>
+</html>

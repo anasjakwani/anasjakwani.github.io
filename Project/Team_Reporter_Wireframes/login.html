@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Team Login</title>
+  </head>
+
+  <body>
+
+<div class="form">
+      <div class="title">Welcome</div>
+      <div class="subtitle">Let's Login your account!</div>
+      <div class="input-container ic1">
+        <input
+          id="loginemail"
+          class="input email"
+          type="text"
+          placeholder=" "
+        />
+        <div class="cut"></div>
+        <label for="Email" class="placeholder">Email</label>
+      </div>
+      <div class="input-container ic2">
+        <input
+          id="loginpassword"
+          class="input password"
+          type="password"
+          placeholder=" "
+        />
+        <div class="cut"></div>
+        <label for="password" class="placeholder">Password</label>
+      </div>
+            <button class="submit" onclick="login()">Login</button>
+            <button class="submit" onclick="sign()">Signup</button>
+                 <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+<script src="./login.js"></script>
+       <script src="./signup.js"></script>
+    <script src="./services.js"></script>
+  </body>
+</html>

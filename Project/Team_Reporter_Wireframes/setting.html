@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./teamsyouown.css">
+    <title>Setting</title>
+</head>
+
+<body>
+
+    <div class="main_div_head">
+        <div class="main_div" id="blur">
+            <div class="setting">Setting</div>
+            <h3>Questions:</h3>
+            <div class="input-container ic1">
+                <input id="teamname" class="input" type="text" placeholder="What did you do Today?" />
+            </div>
+            <div class="input-container ic1">
+                <input id="teamname" class="input" type="text" placeholder="What will you do tomorrow?" />
+            </div>
+            <div class="input-container ic1">
+                <input id="teamname" class="input" type="text" placeholder="Are there any blocker in your way?" />
+            </div>
+            <h3>Reminder Time:</h3>
+            <div class="input-container ic1">
+                <input id="teamname" class="reminder" type="date" placeholder="" />
+                <input id="teamname" class="reminder" type="checkbox" placeholder="" />
+            </div>
+
+            <h3>Members:</h3>
+            <div class="input-container ic1">
+                <input id="teamname" class="input" type="email" placeholder="Add Member" />
+            </div>
+            <button class="submit2" onclick="">Add</button>
+            <div class="confirm">
+                <button class="submit2" onclick="">Save Changes</button>
+                <button class="submit3" onclick="">Cancel</button>
+            </div>
+
+        </div>
+
+
+
+
+    </div>
+    </div>
+
+
+    < <div class="hidden" id="showPopup">
+        <div class="Setting">Create New Team</div>
+        <div class="relative">
+            <div class="input-container ic1">
+                <input id="teamname" class="input" type="text" placeholder=" " />
+                <div class="cut"></div>
+                <label for="TeamName" class="placeholder">Team Name</label>
+            </div>
+            <div class="input-container ic1">
+                <select name="Category" id="teamoption" class="input">
+                    <option value="" disabled selected>Category</option>
+                    <option value="">1</option>
+                    <option value="">2</option>
+                    <option value="">3</option>
+                    <option value="">4</option>
+                    <option value="">5</option>
+                    <option value="">6</option>
+                </select>
+            </div>
+
+            <div class="input-container ic1">
+                <input id="member" class="input" type="text" placeholder=" " />
+                <div class="cut2"></div>
+                <label for="Members" class="placeholder">Members (Type Email)</label>
+            </div>
+            <button class="submit2" onclick="newTeam()">Create Team</button>
+            <button class="submit3" onclick="popUpHide()">Cancel</button>
+        </div>
+        </div>
+        </div>
+
+
+        <!------------------- teams your part -->
+        <div id="yourteam" class="hide">
+            <div class="main_div_head">
+                <div class="main_div" id="blur">
+                    <div class="title">Teams You're Part of</div>
+                    <div class="teams_head"></div>
+                    <div class="button_style">
+                        <button class="createTeam" id="home" onclick="home()">Home</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+
+</html>
